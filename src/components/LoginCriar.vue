@@ -23,9 +23,13 @@ export default {
   },
   methods: {
     async criarUsuario() {
+      try{
      await this.$store.dispatch("criarUsuario", this.$store.state.usuario)
      await this.$store.dispatch("getUsuario", this.$store.state.usuario.email)
      this.$router.push({name: "usuario"})
+      } catch(error){
+        console.log(error)
+      }
     }
   }
 }
