@@ -54,11 +54,6 @@ import ProdutosPaginar from './ProdutosPaginar'
          this.produtos = response.data
        })      
       }, 1500);
-      // fetch("http://localhost:3000/produto")
-      // .then(response => response.json())
-      // .then(response => {
-      //   this.produtos = response
-      // })
     }
   },
   watch: {
