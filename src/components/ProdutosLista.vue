@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { api } from '../plugins/axios'
+//import { api } from '../plugins/axios'
 import {serialize} from '../helpers'
 import ProdutosPaginar from './ProdutosPaginar'
 
@@ -34,7 +34,116 @@ import ProdutosPaginar from './ProdutosPaginar'
       },
   data() {
     return {
-      produtos: null,
+      produtos: [
+         {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "larissafurtado12@live.com",
+      "preco": "4999",
+      "vendido": "false",
+      "descricao": "Esse é um novo notebook",
+      "fotos": null
+    },
+    {
+      "id": "smartphone",
+      "nome": "Smartphone",
+      "usuario_id": "larissafurtado12@live.com",
+      "preco": "2000",
+      "vendido": "false",
+      "descricao": "Esse é um novo smartphone",
+      "fotos": null
+    },
+    {
+      "id": "camera",
+      "nome": "Câmera",
+      "usuario_id": "larissafurtado12@live.com",
+      "preco": "800",
+      "vendido": "false",
+      "descricao": "Essa é uma nova câmera",
+      "fotos": null
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "larissafurtado12@live.com",
+      "preco": "4999",
+      "vendido": "false",
+      "descricao": "Esse é um novo notebook",
+      "fotos": null
+    },
+    {
+      "id": "camera",
+      "nome": "Câmera",
+      "usuario_id": "larissafurtado12@live.com",
+      "preco": "800",
+      "vendido": "false",
+      "descricao": "Essa é uma nova câmera",
+      "fotos": null
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "larissafurtado12@live.com",
+      "preco": "4999",
+      "vendido": "false",
+      "descricao": "Esse é um novo notebook",
+      "fotos": null
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "larissafurtado12@live.com",
+      "preco": "4999",
+      "vendido": "false",
+      "descricao": "Esse é um novo notebook",
+      "fotos": null
+    },
+    {
+      "id": "smartphone",
+      "nome": "Smartphone",
+      "usuario_id": "larissafurtado12@live.com",
+      "preco": "2000",
+      "vendido": "false",
+      "descricao": "Esse é um novo smartphone",
+      "fotos": null
+    },
+    {
+      "id": "camera",
+      "nome": "Câmera",
+      "usuario_id": "larissafurtado12@live.com",
+      "preco": "800",
+      "vendido": "false",
+      "descricao": "Essa é uma nova câmera",
+      "fotos": null
+    },
+    {
+      "id": "notebook",
+      "nome": "Notebook",
+      "usuario_id": "larissafurtado12@live.com",
+      "preco": "4999",
+      "vendido": "false",
+      "descricao": "Esse é um novo notebook",
+      "fotos": null
+    },
+    {
+      "id": "smartphone",
+      "nome": "Smartphone",
+      "usuario_id": "larissafurtado12@live.com",
+      "preco": "2000",
+      "vendido": "false",
+      "descricao": "Esse é um novo smartphone",
+      "fotos": null
+    },
+    {
+      "id": "camera",
+      "nome": "Câmera",
+      "usuario_id": "larissafurtado12@live.com",
+      "preco": "800",
+      "vendido": "false",
+      "descricao": "Essa é uma nova câmera",
+      "fotos": null
+    }
+      ],
       produtosPorPagina: 9,
       produtosTotal: 0
     }
@@ -46,24 +155,24 @@ import ProdutosPaginar from './ProdutosPaginar'
     }
   },
   methods: {
-    getProdutos() {
-      this.produtos = null
-      setTimeout(() => {
-        api.get(this.url).then(response => {
-          this.produtosTotal = Number(response.headers['x-total-count'])
-         this.produtos = response.data
-       })      
-      }, 1500);
-    }
+    // getProdutos() {
+    //   this.produtos = null
+    //   setTimeout(() => {
+    //     api.get(this.url).then(response => {
+    //       this.produtosTotal = Number(response.headers['x-total-count'])
+    //      this.produtos = response.data
+    //    })      
+    //   }, 1500);
+    // }
   },
   watch: {
     url() {
       this.getProdutos()
     }
   },
-  created() {
-    this.getProdutos()
-  }
+  // created() {
+  //   this.getProdutos()
+  // }
 }
 </script>
 
